@@ -6808,7 +6808,7 @@ e.default=i})),define("ember-code-snippet/index",["exports","ember-code-snippet/
 Object.defineProperty(e,"__esModule",{value:!0}),Object.defineProperty(e,"getCodeSnippet",{enumerable:!0,get:function(){return t.default}})}))
 define("ember-code-snippet/snippets",["exports"],(function(e){"use strict"
 Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0
-e.default={"basic-usage.hbs":"<HOT::Grid @data={{this.data}} />","basic-usage.js":"import Component from '@glimmer/component';\n\nexport default class BasicUsageComponent extends Component {\n  constructor() {\n    super(...arguments);\n    \n    this.data = [\n      ['', 'Ford', 'Tesla', 'Toyota', 'Honda'],\n      ['2017', 10, 11, 12, 13],\n      ['2018', 20, 11, 14, 13],\n      ['2019', 30, 15, 12, 13]\n    ];\n  }\n}"}})),define("ember-component-css/initializers/component-styles",["exports","ember-component-css/pod-names"],(function(e,t){"use strict"
+e.default={"basic-usage.hbs":"<HOT::Grid \n  @data={{this.data}}\n  @options={{hash\n    rowHeaders=true\n    colHeaders=true\n    filters=true\n    dropdownMenu=true\n  }}\n/>","basic-usage.js":"import Component from '@glimmer/component';\n\nexport default class BasicUsageComponent extends Component {\n  constructor() {\n    super(...arguments);\n    \n    this.data = [\n      ['', 'Ford', 'Tesla', 'Toyota', 'Honda'],\n      ['2017', 10, 11, 12, 13],\n      ['2018', 20, 11, 14, 13],\n      ['2019', 30, 15, 12, 13]\n    ];\n  }\n}"}})),define("ember-component-css/initializers/component-styles",["exports","ember-component-css/pod-names"],(function(e,t){"use strict"
 function r(){}Object.defineProperty(e,"__esModule",{value:!0}),e.initialize=r,e.default=void 0,Ember.ComponentLookup.reopen({componentFor:function(e,r){return r=r.hasRegistration?r:Ember.getOwner(this),t.default[e]&&!r.hasRegistration("component:".concat(e))&&r.register("component:".concat(e),Ember.Component),this._super.apply(this,arguments)}}),Ember.Component.reopen({_componentIdentifier:Ember.computed({get:function(){return(this._debugContainerKey||"").replace("component:","")}}),_shouldAddNamespacedClassName:Ember.computed({get:function(){return""!==this.get("tagName")&&this.get("styleNamespace")}}),styleNamespace:Ember.computed({get:function(){return t.default[this.get("_componentIdentifier")]||""}}),componentCssClassName:Ember.computed.alias("styleNamespace"),init:function(){this._super.apply(this,arguments),this.get("_shouldAddNamespacedClassName")&&(this.classNames=this.classNames.concat(this.get("styleNamespace")))}})
 var n={initialize:r}
 e.default=n})),define("ember-component-css/instance-initializers/route-styles",["exports","ember-component-css/utils/init-route-styles"],(function(e,t){"use strict"
@@ -7823,18 +7823,19 @@ n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Obj
 return e}function s(){if("undefined"==typeof Reflect||!Reflect.construct)return!1
 if(Reflect.construct.sham)return!1
 if("function"==typeof Proxy)return!0
-try{return Date.prototype.toString.call(Reflect.construct(Date,[],(function(){}))),!0}catch(e){return!1}}function u(e){return(u=Object.setPrototypeOf?Object.getPrototypeOf:function(e){return e.__proto__||Object.getPrototypeOf(e)})(e)}function l(e,t){return(l=Object.setPrototypeOf||function(e,t){return e.__proto__=t,e})(e,t)}Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0
-var c=Ember.HTMLBars.template({id:"rzndpunz",block:'{"symbols":[],"statements":[[9,"div",true],[13,"id",[27,[24,0],["id"]],null],[10],[11],[1,1,0,0,"\\n"]],"hasEval":false,"upvars":[]}',meta:{moduleName:"ember-handsontable/components/h-o-t/grid.hbs"}}),d=function(e){(function(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function")
-e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,writable:!0,configurable:!0}}),t&&l(e,t)})(h,e)
-var t,r,c,d,f=(t=h,function(){var e,r=u(t)
+try{return Date.prototype.toString.call(Reflect.construct(Date,[],(function(){}))),!0}catch(e){return!1}}function u(e){return(u=Object.setPrototypeOf?Object.getPrototypeOf:function(e){return e.__proto__||Object.getPrototypeOf(e)})(e)}function l(e,t){return(l=Object.setPrototypeOf||function(e,t){return e.__proto__=t,e})(e,t)}function c(e,t,r){return t in e?Object.defineProperty(e,t,{value:r,enumerable:!0,configurable:!0,writable:!0}):e[t]=r,e}Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0
+var d=Ember.HTMLBars.template({id:"rzndpunz",block:'{"symbols":[],"statements":[[9,"div",true],[13,"id",[27,[24,0],["id"]],null],[10],[11],[1,1,0,0,"\\n"]],"hasEval":false,"upvars":[]}',meta:{moduleName:"ember-handsontable/components/h-o-t/grid.hbs"}}),f=function(e){(function(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function")
+e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,writable:!0,configurable:!0}}),t&&l(e,t)})(p,e)
+var t,r,d,f,h=(t=p,function(){var e,r=u(t)
 if(s()){var n=u(this).constructor
 e=Reflect.construct(r,arguments,n)}else e=r.apply(this,arguments)
 return o(this,e)})
-function h(){var e
-return n(this,h),(e=f.apply(this,arguments)).id="".concat("hot-table-").concat(Ember.guidFor(a(e))),Ember.run.scheduleOnce("afterRender",a(e),e._initializeGrid),e}return r=h,(c=[{key:"_fetchHandsonTable",value:function(){return emberAutoImportDynamic("handsontable").then((function(e){return e.default})).then((function(e){return e}))}},{key:"_initializeGrid",value:function(){var e=this
-this._fetchHandsonTable().then((function(t){var r=new t(document.getElementById(e.id),{data:e.args.data,rowHeaders:!0,colHeaders:!0})
-e.onInit(r)}))}},{key:"onInit",value:function(){}}])&&i(r.prototype,c),d&&i(r,d),h}(t.default)
-e.default=d,Ember._setComponentTemplate(c,d)})),define("ember-href-to/helpers/href-to",["exports"],(function(e){"use strict"
+function p(){var e
+return n(this,p),c(a(e=h.apply(this,arguments)),"options",e.args.options||{}),e.id="".concat("hot-table-").concat(Ember.guidFor(a(e))),Ember.run.scheduleOnce("afterRender",a(e),e._initializeGrid),e}return r=p,(d=[{key:"_fetchHandsonTable",value:function(){return emberAutoImportDynamic("handsontable").then((function(e){return e.default})).then((function(e){return e}))}},{key:"_mergeConfigs",value:function(){var e=Ember.getOwner(this).resolveRegistration("config:environment")
+return Ember.assign({},e["ember-handsontable"],this.options)}},{key:"_initializeGrid",value:function(){var e=this
+this._fetchHandsonTable().then((function(t){var r=new t(document.getElementById(e.id),Ember.assign({},{data:e.args.data},e.options))
+e.onInit(r)}))}},{key:"onInit",value:function(){}}])&&i(r.prototype,d),f&&i(r,f),p}(t.default)
+e.default=f,Ember._setComponentTemplate(d,f)})),define("ember-href-to/helpers/href-to",["exports"],(function(e){"use strict"
 function t(e){if(Array.isArray(e)){for(var t=0,r=Array(e.length);t<e.length;t++)r[t]=e[t]
 return r}return Array.from(e)}function r(e,t){var r=Ember.getOwner(e).lookup("service:router")
 if(void 0!==r){for(var n=arguments.length,i=Array(n>2?n-2:0),o=2;o<n;o++)i[o-2]=arguments[o]
