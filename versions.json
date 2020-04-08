@@ -8,7 +8,13 @@
   "-latest": {
     "path": "",
     "name": "Latest",
-    "sha": "00b8d267c0db8d71f9fc455c6a0ffa7d34528255",
-    "tag": null
+    "sha": "5843b72d9c118dccff9c8d6e8515157724258925",
+    "tag": "0.0.7"
+  },
+  "0.0.7": {
+    "path": "versions/0.0.7",
+    "name": "0.0.7",
+    "sha": "5843b72d9c118dccff9c8d6e8515157724258925",
+    "tag": "0.0.7"
   }
 }
