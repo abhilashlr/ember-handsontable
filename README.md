@@ -1,7 +1,7 @@
 ember-handsontable
 ==============================================================================
 
-This is an Ember wrapper on top of handsontable. Refer: https://abhilashlr.github.io/ember-handsontable/versions/master/
+This is an Ember wrapper on top of handsontable. Refer: https://abhilashlr.github.io/ember-handsontable/
 
 
 Contributing
