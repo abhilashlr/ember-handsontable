@@ -29,7 +29,8 @@ export default class HOTGridComponent extends Component {
     return assign(
       {},
       config['ember-handsontable'],
-      this.options
+      this.options,
+      { data: this.args.data }
     );
   }
 
@@ -37,16 +38,13 @@ export default class HOTGridComponent extends Component {
     this._fetchHandsonTable().then((Handsontable) => {
       const container = document.getElementById(this.id);
   
-      const HOTable = new Handsontable(container, 
-        assign({}, 
-          { data: this.args.data },
-          this.options
-        )
-      );
+      const HOTable = new Handsontable(container, this._mergeConfigs());
   
       this.onInit(HOTable);
     });
   }
 
-  onInit() {}
+  onInit() {
+    // NO-OP
+  }
 }

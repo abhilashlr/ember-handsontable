@@ -9,6 +9,7 @@ const Router = AddonDocsRouter.extend({
 Router.map(function() {
   docsRoute(this, function() {
     this.route('basic-usage');
+    this.route('data-sources');
   });
 
   this.route('not-found', { path: '/*path' });
