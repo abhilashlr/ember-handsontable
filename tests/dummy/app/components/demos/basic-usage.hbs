@@ -1,3 +1,11 @@
 {{! BEGIN-SNIPPET basic-usage.hbs }}
-<HOT::Grid @data={{this.data}} />
+<HOT::Grid 
+  @data={{this.data}}
+  @options={{hash
+    rowHeaders=true
+    colHeaders=true
+    filters=true
+    dropdownMenu=true
+  }}
+/>
 {{! END-SNIPPET }}

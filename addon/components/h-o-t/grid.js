@@ -1,10 +1,14 @@
 import Component from '@glimmer/component';
+import { getOwner } from '@ember/application';
+import { assign } from '@ember/polyfills';
 import { guidFor } from '@ember/object/internals';
 import { scheduleOnce } from '@ember/runloop';
 
 const NAMESPACE = 'hot-table-';
 
 export default class HOTGridComponent extends Component {
+  options = this.args.options || {};
+
   constructor() {
     super(...arguments);
 
@@ -19,15 +23,26 @@ export default class HOTGridComponent extends Component {
       .then((Handsontable) => Handsontable);
   }
 
+  _mergeConfigs() {
+    let config = getOwner(this).resolveRegistration('config:environment');
+
+    return assign(
+      {},
+      config['ember-handsontable'],
+      this.options
+    );
+  }
+
   _initializeGrid() {
     this._fetchHandsonTable().then((Handsontable) => {
       const container = document.getElementById(this.id);
   
-      const HOTable = new Handsontable(container, {
-        data: this.args.data,
-        rowHeaders: true,
-        colHeaders: true
-      });
+      const HOTable = new Handsontable(container, 
+        assign({}, 
+          { data: this.args.data },
+          this.options
+        )
+      );
   
       this.onInit(HOTable);
     });
