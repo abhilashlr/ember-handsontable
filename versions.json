@@ -4,5 +4,11 @@
     "name": "master",
     "sha": "00b8d267c0db8d71f9fc455c6a0ffa7d34528255",
     "tag": null
+  },
+  "-latest": {
+    "path": "",
+    "name": "Latest",
+    "sha": "00b8d267c0db8d71f9fc455c6a0ffa7d34528255",
+    "tag": null
   }
 }
