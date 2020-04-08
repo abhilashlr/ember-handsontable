@@ -1,9 +1,15 @@
-# Basic implementation
+# Installation
 
-{{#docs-demo as |demo|}}
-  {{#demo.example name="docs-demo-basic.hbs"}}
-    <HOT::Grid />
-  {{/demo.example}}
+```bash
+# yarn users:
+yarn add --dev ember-handsontable
 
-  {{demo.snippet "docs-demo-basic.hbs"}}
-{{/docs-demo}}
+# npm users:
+npm install --save-dev ember-handsontable
+```
+
+<h2 class='docs-text-large-5 docs-font-bold docs-mb-4'>Compatibility</h2>
+
+* Ember.js v3.12 or above
+* Ember CLI v3.12 or above
+* Node.js v10 or above
